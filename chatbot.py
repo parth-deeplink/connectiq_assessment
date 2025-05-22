@@ -6,11 +6,6 @@ import os
 
 load_dotenv()
 
-# client = OpenAI(
-#     # This is the default and can be omitted
-#     api_key=os.getenv("OPENAI_API_KEY"),
-# )
-# print("api_key", os.getenv("OPENAI_API_KEY"))
 openai_api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=openai_api_key)
 

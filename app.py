@@ -47,11 +47,11 @@ def initialize_chatbot():
     raw_documents = extract_text_from_pdf(PDF_PATH)
     processed_chunks = chunk_text(raw_documents, chunk_size=2000, overlap=200) # Match chunking used in chatbot.py
 
-    # Initialize with Google Gemini embedding model
+   
     vector_store = LocalVectorStore(embedding_model_name="models/text-embedding-3-small") 
     vector_store.add_documents(processed_chunks)
 
-    # Initialize chatbot with Google Gemini Pro
+ 
     CHATBOT = RAGChatbot(vector_store, llm_model_name="gpt-4o-mini") 
     INITIALIZED = True
     print("Chatbot initialized successfully!")

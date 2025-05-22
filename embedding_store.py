@@ -8,15 +8,7 @@ import os
 
 load_dotenv()
 
-# Load API key (replace with env variable loading in production)
-# from config import OPENAI_API_KEY
 
-
-# client = OpenAI(
-#     # This is the default and can be omitted
-#     api_key=os.getenv("OPENAI_API_KEY"),
-# )
-# print("api_key", os.getenv("OPENAI_API_KEY"))
 openai_api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=openai_api_key)
 
